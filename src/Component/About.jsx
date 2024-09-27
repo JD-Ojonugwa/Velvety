@@ -62,8 +62,10 @@ const About = () => {
     <div className="flex flex-col items-center">
       {/* About Us Section */}
       <div className="w-full bg-[#e4ece0] py-6 text-left px-12 md:px-24">
-        <h3 className="text-2xl font-semibold text-[#899f87]">About Us</h3>
-        <h1 className="text-4xl font-bold mt-2 text-[#899f87]">
+        <h3 className="text-2xl font-semibold text-[#899f87] text-center">
+          About Us
+        </h3>
+        <h1 className="text-4xl font-bold mt-2 text-[#899f87] text-center">
           Velvety Facial and Skincare Company
         </h1>
 
