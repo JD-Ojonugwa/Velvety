@@ -112,7 +112,7 @@ const Header = () => {
             isOpen ? "translate-x-0" : "translate-x-full"
           } transition-transform duration-300 md:hidden`}
         >
-          <div className="fixed top-0 right-0 w-64 bg-[#3C5E39] h-full shadow-md p-6 z-30">
+          <div className="fixed top-0 right-0 w-80 bg-[#899f87] h-full shadow-md p-6 z-30">
             {/* Close button */}
             <button className="text-[#ebefe7] mb-4" onClick={toggleMenu}>
               <svg

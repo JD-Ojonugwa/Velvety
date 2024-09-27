@@ -27,7 +27,7 @@ const Product = () => {
           </div>
           <div className="flex justify-between items-center mt-2">
             {/* Buy Now Button */}
-            <button className="bg-[#899f87] text-white px-4 py-2 rounded-lg">
+            <button className="bg-[#899f87] text-[#ebefe7] px-4 py-2 rounded-lg">
               Buy Now
             </button>
             {/* Rating Stars */}
@@ -46,7 +46,7 @@ const Product = () => {
           </div>
           <div className="flex justify-between items-center mt-2">
             {/* Buy Now Button */}
-            <button className="bg-[#899f87] text-white px-4 py-2 rounded-lg">
+            <button className="bg-[#899f87] text-[#ebefe7] px-4 py-2 rounded-lg">
               Buy Now
             </button>
             {/* Rating Stars */}
@@ -65,7 +65,7 @@ const Product = () => {
           </div>
           <div className="flex justify-between items-center mt-2">
             {/* Buy Now Button */}
-            <button className="bg-[#899f87] text-white px-4 py-2 rounded-lg">
+            <button className="bg-[#899f87] text-[#ebefe7] px-4 py-2 rounded-lg">
               Buy Now
             </button>
             {/* Rating Stars */}
@@ -84,7 +84,7 @@ const Product = () => {
           </div>
           <div className="flex justify-between items-center mt-2">
             {/* Buy Now Button */}
-            <button className="bg-[#899f87] text-white px-4 py-2 rounded-lg">
+            <button className="bg-[#899f87] text-[#ebefe7] px-4 py-2 rounded-lg">
               Buy Now
             </button>
             {/* Rating Stars */}
@@ -103,7 +103,7 @@ const Product = () => {
           </div>
           <div className="flex justify-between items-center mt-2">
             {/* Buy Now Button */}
-            <button className="bg-[#899f87] text-white px-4 py-2 rounded-lg">
+            <button className="bg-[#899f87] text-[#ebefe7] px-4 py-2 rounded-lg">
               Buy Now
             </button>
             {/* Rating Stars */}
@@ -122,7 +122,7 @@ const Product = () => {
           </div>
           <div className="flex justify-between items-center mt-2">
             {/* Buy Now Button */}
-            <button className="bg-[#899f87] text-white px-4 py-2 rounded-lg">
+            <button className="bg-[#899f87] text-[#ebefe7] px-4 py-2 rounded-lg">
               Buy Now
             </button>
             {/* Rating Stars */}
