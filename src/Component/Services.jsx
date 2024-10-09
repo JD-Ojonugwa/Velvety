@@ -159,7 +159,7 @@ const Services = () => {
             at Maison Absolution
           </h2>
           <button className="bg-[#899f87] text-[#ebefe7] font-bold py-2 px-4 rounded mt-4 flex items-center transition-transform transform hover:scale-105">
-            Try Our Treatments
+            Try Treatments
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
