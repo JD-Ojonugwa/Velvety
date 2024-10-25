@@ -34,7 +34,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="bg-[#e4ece0] py-12">
+    <div className="bg-[#e4ece0] py-12" id="testimonials">
       <h2 className="text-3xl font-bold text-[#899f87] text-center mb-8">
         What Our Customers Say
       </h2>

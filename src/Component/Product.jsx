@@ -8,7 +8,10 @@ import ProductImage6 from "../assets/product6.svg";
 
 const Product = () => {
   return (
-    <div className="w-full bg-[#e4ece0] py-6 px-12 md:px-24 text-center">
+    <div
+      className="w-full bg-[#e4ece0] py-6 px-12 md:px-24 text-center"
+      id="product"
+    >
       <h3 className="text-2xl font-semibold text-[#899f87]">
         Our Featured Products
       </h3>

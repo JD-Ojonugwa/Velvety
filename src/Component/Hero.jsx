@@ -45,13 +45,16 @@
 
 // // // export default Hero;
 
-import React from "react";
+import React, { useRef } from "react";
 import HeroImage from "../assets/Hero_Image1.svg";
 import FlowerSvg from "../assets/Hero_Image2.svg";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center h-screen">
+    <div
+      className="flex flex-col md:flex-row justify-center items-center h-screen"
+      id="home"
+    >
       {/* Left side: Hidden on small screens */}
       <div className="hidden md:block w-1/2 h-full bg-[#899f87]">
         <img

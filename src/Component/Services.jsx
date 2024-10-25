@@ -56,7 +56,10 @@ import Image3 from "../assets/beauty-treatment.svg";
 
 const Services = () => {
   return (
-    <div className="w-full bg-[#ebefe7] py-6 text-left px-6 md:px-24">
+    <div
+      className="w-full bg-[#ebefe7] py-6 text-left px-6 md:px-24"
+      id="services"
+    >
       <h3 className="text-2xl font-semibold text-[#899f87] text-center">
         Try our services
       </h3>

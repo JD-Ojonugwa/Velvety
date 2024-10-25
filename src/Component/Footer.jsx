@@ -3,7 +3,7 @@ import Logo from "../assets/Logo.svg";
 
 const Footer = () => {
   return (
-    <div className="bg-[#3C5E39] text-[#ebefe7] shadow-md">
+    <div className="bg-[#3C5E39] text-[#ebefe7] shadow-md" id="footer">
       <div className="flex flex-col md:flex-row w-full justify-between">
         {/* Footer logo and info */}
         <div className="py-4 px-6 flex-1 flex flex-col items-center cursor-pointer">

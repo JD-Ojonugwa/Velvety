@@ -59,7 +59,7 @@ import Image4 from "../assets/serum 3.svg";
 
 const About = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center" id="about">
       {/* About Us Section */}
       <div className="w-full bg-[#e4ece0] py-6 text-left px-12 md:px-24">
         <h3 className="text-2xl font-semibold text-[#899f87] text-center">
