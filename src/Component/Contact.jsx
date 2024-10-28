@@ -1,6 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
+  const [formStatus, setFormStatus] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xdkoaylk", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setFormStatus("success");
+        form.reset();
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      setFormStatus("error");
+    }
+  };
+
   return (
     <>
       <div className="bg-[#ebefe7] py-6 px-12 md:px-24" id="contact">
@@ -74,26 +101,32 @@ const Contact = () => {
 
           {/* Right Section */}
           <div className="lg:w-1/2">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <input
                   type="text"
+                  name="Name"
                   placeholder="Enter your full name"
                   className="w-full p-3 bg-[#e4ece0] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3C5E39]"
+                  required
                 />
               </div>
               <div>
                 <input
-                  type="text"
-                  placeholder="Enter phone number"
+                  type="email"
+                  name="Email"
+                  placeholder="Email address"
                   className="w-full p-3 bg-[#e4ece0] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3C5E39]"
+                  required
                 />
               </div>
               <div>
                 <textarea
+                  name="Message"
                   placeholder="Enter your message"
                   className="w-full p-3 bg-[#e4ece0] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3C5E39]"
                   rows="4"
+                  required
                 ></textarea>
               </div>
               <button
@@ -103,6 +136,17 @@ const Contact = () => {
                 <span>Submit</span>
                 <span className="text-lg">→</span>
               </button>
+
+              {formStatus === "success" && (
+                <p className="text-[#3C5E39] font-semibold">
+                  Thank you! Your message has been sent.
+                </p>
+              )}
+              {formStatus === "error" && (
+                <p className="text-red-400 font-semibold mt-2">
+                  Oops! Something went wrong, please try again.
+                </p>
+              )}
             </form>
           </div>
         </div>

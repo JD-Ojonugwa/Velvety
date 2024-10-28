@@ -47,7 +47,7 @@ const Product = ({ cartItems, setCartItems }) => {
             className="bg-[#ebefe7] p-4 rounded-lg transition-transform transform hover:scale-105 relative"
           >
             <img
-              src={product.image} // Dynamically uses the product's image
+              src={product.image}
               alt={product.name}
               className="w-full h-auto"
             />
