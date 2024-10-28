@@ -57,7 +57,7 @@ const Header = () => {
           </button>
 
           {/* Navbar for desktop */}
-          <nav className="hidden md:flex space-x-6 text-[#ebefe7] ">
+          <nav className="hidden md:flex space-x-6 text-[#ebefe7] cursor-pointer">
             <Link
               to="home"
               className="flex items-center hover:text-green-400"

@@ -3,14 +3,14 @@ import React from "react";
 const Contact = () => {
   return (
     <>
-      <div className="bg-[#ebefe7] py-6 px-12 md:px-24">
+      <div className="bg-[#ebefe7] py-6 px-12 md:px-24" id="contact">
         <h2 className="text-[#899f87] font-bold text-center text-2xl">
           Contact Us
         </h2>
         <div className="flex flex-col lg:flex-row lg:justify-between gap-12 lg:gap-24 mt-8">
           {/* Left Section */}
           <div className="lg:w-1/2">
-            <h3 className="text-2xl font-bold text-[#3C5E39] mb-4 flex items-center">
+            <h3 className="text-2xl font-semi-bold text-[#3C5E39] mb-4 flex items-center">
               Send us a message
               {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,7 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="w-full lg:w-auto bg-[#899f87] text-[#ebefe7] font-semibold py-3 px-6 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
+                className="w-full lg:w-auto bg-[#899f87] text-[#ebefe7] font-semibold py-3 px-6 rounded-md hover:bg-[#3C5E39] transition-colors flex items-center justify-center space-x-2"
               >
                 <span>Submit</span>
                 <span className="text-lg">→</span>

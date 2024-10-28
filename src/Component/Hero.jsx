@@ -45,11 +45,18 @@
 
 // // // export default Hero;
 
-import React, { useRef } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import HeroImage from "../assets/Hero_Image1.svg";
 import FlowerSvg from "../assets/Hero_Image2.svg";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleShopNow = () => {
+    navigate("/product");
+  };
+
   return (
     <div
       className="flex flex-col md:flex-row justify-center items-center h-screen"
@@ -80,7 +87,10 @@ const Hero = () => {
           </p>
 
           <div className="flex justify-center md:justify-start">
-            <button className="bg-[#ebefe7] hover:bg-[#899f87] text-[#3C5E39] font-bold py-2 px-4 rounded mt-4 flex items-center">
+            <button
+              onClick={handleShopNow}
+              className="bg-[#ebefe7] hover:bg-[#899f87] text-[#3C5E39] font-bold py-2 px-4 rounded mt-4 flex items-center"
+            >
               Shop Now
               <svg
                 xmlns="http://www.w3.org/2000/svg"
