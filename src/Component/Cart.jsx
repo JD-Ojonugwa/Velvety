@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 
 const Cart = ({ cartItems, setCartItems }) => {
+  const navigate = useNavigate();
+
   const updateQuantity = (productId, quantity) => {
     setCartItems(
       cartItems.map((item) =>
@@ -76,7 +79,10 @@ const Cart = ({ cartItems, setCartItems }) => {
             <div className="text-2xl font-semibold text-[#899f87] mt-6">
               Total: ${getTotal()}
             </div>
-            <button className="bg-[#899f87] text-[#ebefe7] px-6 py-3 rounded-lg mt-4">
+            <button
+              onClick={() => navigate("/checkout")}
+              className="bg-[#899f87] text-[#ebefe7] px-6 py-3 rounded-lg mt-4"
+            >
               Proceed to Checkout
             </button>
           </div>

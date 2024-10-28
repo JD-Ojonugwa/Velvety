@@ -10,9 +10,18 @@ import Contact from "./Component/Contact";
 import Footer from "./Component/Footer";
 import ProductLayout from "./Component/ProductLayout";
 import Cart from "./Component/Cart";
+import Checkout from "./Component/Checkout";
+import CardPayment from "./Component/CardPayment";
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
+
+  // Function to calculate total for the checkout page
+  const calculateTotal = () => {
+    return cartItems
+      .reduce((total, item) => total + item.price * item.quantity, 0)
+      .toFixed(2);
+  };
 
   return (
     <>
@@ -54,6 +63,16 @@ const App = () => {
           <Route
             path="/cart"
             element={<Cart cartItems={cartItems} setCartItems={setCartItems} />}
+          />
+
+          <Route
+            path="/checkout"
+            element={<Checkout total={calculateTotal()} />}
+          />
+
+          <Route
+            path="/payment/card"
+            element={<CardPayment total={calculateTotal()} />}
           />
         </Routes>
       </BrowserRouter>
