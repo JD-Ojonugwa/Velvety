@@ -7,6 +7,7 @@ import Product from "./Component/Product";
 import Services from "./Component/Services";
 import Testimonials from "./Component/Testimonials";
 import Footer from "./Component/Footer";
+import Contact from "./Component/Contact";
 
 const App = () => {
   return (
@@ -59,6 +60,7 @@ const App = () => {
       <Product />
       <Services />
       <Testimonials />
+      <Contact />
       <Footer />
     </>
   );
