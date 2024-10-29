@@ -9,7 +9,7 @@ const Contact = () => {
     const data = new FormData(form);
 
     try {
-      const response = await fetch(process.env.REACT_APP_FORMSPREE_URL, {
+      const response = await fetch("https://formspree.io/f/xdkoaylk", {
         method: "POST",
         body: data,
         headers: {
