@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
 import Header from "./Component/Header";
 import Hero from "./Component/Hero";
 import About from "./Component/About";
@@ -11,7 +12,6 @@ import Footer from "./Component/Footer";
 import ProductLayout from "./Component/ProductLayout";
 import Cart from "./Component/Cart";
 import Checkout from "./Component/Checkout";
-import CardPayment from "./Component/CardPayment";
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -59,6 +59,14 @@ const App = () => {
             }
           />
 
+          <Route path="/" element={<Hero />} />
+          <Route
+            path="/product"
+            element={
+              <Product cartItems={cartItems} setCartItems={setCartItems} />
+            }
+          />
+
           <Route path="/product" element={<ProductLayout />} />
           <Route
             path="/cart"
@@ -68,11 +76,6 @@ const App = () => {
           <Route
             path="/checkout"
             element={<Checkout total={calculateTotal()} />}
-          />
-
-          <Route
-            path="/payment/card"
-            element={<CardPayment total={calculateTotal()} />}
           />
         </Routes>
       </BrowserRouter>

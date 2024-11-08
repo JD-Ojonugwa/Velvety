@@ -1,5 +1,5 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import ProductImage1 from "../assets/Product1.svg";
 import ProductImage2 from "../assets/Product2.svg";
 import ProductImage3 from "../assets/Product3.svg";
@@ -18,14 +18,19 @@ const products = [
 
 const Product = ({ cartItems, setCartItems }) => {
   const navigate = useNavigate();
-  const handleGoToCart = () => {
-    navigate("/cart");
-  };
+  const location = useLocation;
 
   const addToCart = (product) => {
     setCartItems([...cartItems, { ...product, quantity: 1 }]);
     navigate("/cart");
   };
+
+  // Check for passed product data when the component loads
+  useEffect(() => {
+    if (location.state?.addToCartProduct) {
+      addToCart(location.state.addToCartProduct);
+    }
+  }, [location.state]);
 
   return (
     <div
