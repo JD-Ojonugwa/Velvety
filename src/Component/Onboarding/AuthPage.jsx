@@ -9,24 +9,6 @@ import Register from "./Register";
 import Login from "./Login";
 import { toast, ToastContainer } from "react-toastify";
 
-// export default function AuthPage() {
-//   const [isLogin, setIsLogin] = useState(true);
-//   const [fullName, setFullName] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-
-//   const handleToggle = () => setIsLogin(!isLogin);
-
-//   const handleLogin = () => {
-//     // Add logic for login
-//     console.log("Logged in with:", email, password);
-//   };
-
-//   const handleRegister = () => {
-//     // Add logic for registration
-//     console.log("Registered with:", fullName, email, password);
-//     setIsLogin(true);
-//   };
 const AuthPage = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState("");
