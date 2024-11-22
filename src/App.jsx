@@ -12,6 +12,8 @@ import Footer from "./Component/Footer";
 import ProductLayout from "./Component/ProductLayout";
 import Cart from "./Component/Cart";
 import Checkout from "./Component/Checkout";
+import AuthPage from "./Component/Onboarding/AuthPage";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -25,23 +27,11 @@ const App = () => {
 
   return (
     <>
+      <ToastContainer />
+
       <BrowserRouter>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Header />
-                <Hero />
-                <About />
-                <Product setCartItems={setCartItems} cartItems={cartItems} />
-                <Services />
-                <Testimonials />
-                <Contact />
-                <Footer />
-              </>
-            }
-          />
+          <Route path="/" element={<AuthPage />} />
 
           <Route
             path="/home"
@@ -59,7 +49,7 @@ const App = () => {
             }
           />
 
-          <Route path="/" element={<Hero />} />
+          {/* <Route path="/" element={<Hero />} /> */}
           <Route
             path="/product"
             element={
