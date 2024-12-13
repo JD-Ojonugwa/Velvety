@@ -82,7 +82,7 @@ const Footer = () => {
         className="flex items-center justify-between px-8 py-3 border-t-[1px] border-[#899f87]
 "
       >
-        <p>© Coded by JD.</p>
+        <p>© Coded by JD 2024.</p>
         <ul className="flex space-x-3 cursor-pointer">
           <li className="hover:text-green-400">Licenses</li>
           <li className="hover:text-green-400">Privacy</li>

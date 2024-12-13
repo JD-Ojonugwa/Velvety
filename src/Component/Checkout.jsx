@@ -7,7 +7,7 @@ const Checkout = ({ total }) => {
   const navigate = useNavigate();
   const [paymentMethod, setPaymentMethod] = useState("card");
   const [country, setCountry] = useState("Nigeria");
-  const [otherCountry, setOtherCountry] = useState(""); // State for custom country input
+  const [otherCountry, setOtherCountry] = useState("");
   const [formFields, setFormFields] = useState({
     cardNumber: "",
     expirationDate: "",
@@ -167,7 +167,7 @@ const Checkout = ({ total }) => {
                   </div>
                   <div className="w-1/3">
                     <label className="block text-[#3C5E39] font-semibold mb-2">
-                      Expiration date*
+                      Date*
                     </label>
                     <input
                       type="text"
