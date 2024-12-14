@@ -1,8 +1,14 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}", // Ensure this is correct
+  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        worksans: ['"Work Sans"', "sans-serif"], // Font family config
+      },
+    },
   },
   plugins: [],
 };
