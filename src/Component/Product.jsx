@@ -4,7 +4,7 @@ import ProductImage1 from "../assets/Product1.svg";
 import ProductImage2 from "../assets/Product2.svg";
 import ProductImage3 from "../assets/Product3.svg";
 import ProductImage4 from "../assets/Product4.svg";
-import ProductImage5 from "../assets/Product5.svg";
+import ProductImage5 from "../assets/item5.svg";
 import ProductImage6 from "../assets/product6.svg";
 
 const products = [
