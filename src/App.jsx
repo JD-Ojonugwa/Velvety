@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "./Component/Header";
 import Hero from "./Component/Hero";
@@ -13,7 +14,7 @@ import ProductLayout from "./Component/ProductLayout";
 import Cart from "./Component/Cart";
 import Checkout from "./Component/Checkout";
 import AuthPage from "./Component/Onboarding/AuthPage";
-import { ToastContainer } from "react-toastify";
+import ProtectedRoute from "./Component/ProtectedRoute";
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -31,10 +32,10 @@ const App = () => {
 
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<AuthPage />} />
+          {/* <Route path="/home" element={<AuthPage />} /> */}
 
           <Route
-            path="/home"
+            path="/"
             element={
               <>
                 <Header />
@@ -49,7 +50,6 @@ const App = () => {
             }
           />
 
-          {/* <Route path="/" element={<Hero />} /> */}
           <Route
             path="/product"
             element={
@@ -63,9 +63,20 @@ const App = () => {
             element={<Cart cartItems={cartItems} setCartItems={setCartItems} />}
           />
 
-          <Route
+          <Route path="/auth" element={<AuthPage />} />
+
+          {/* <Route
             path="/checkout"
             element={<Checkout total={calculateTotal()} />}
+          /> */}
+
+          <Route
+            path="/checkout"
+            element={
+              <ProtectedRoute>
+                <Checkout total={calculateTotal()} />
+              </ProtectedRoute>
+            }
           />
         </Routes>
       </BrowserRouter>
