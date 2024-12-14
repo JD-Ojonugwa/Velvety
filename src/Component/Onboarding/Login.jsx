@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import natural from "../../assets/natural.jpg";
+import Logo from "../../assets/Logo.svg";
 
 export default function Login({
   onToggle,
@@ -24,21 +26,27 @@ export default function Login({
   return (
     <div className="flex min-h-screen">
       {/* Left Side: Image */}
-      <div className="w-1/2 bg-[#e4ece0] flex items-center justify-center">
+      <div className="w-1/2 bg-[#e4ece0] flex items-center justify-center hidden sm:flex">
         <img
-          src="/path/to/your-image.jpg"
+          src={natural}
           alt="Login Side Image"
           className="h-full w-full object-cover"
         />
       </div>
 
       {/* Right Side: Login Form */}
-      <div className="w-1/2 bg-[#3C5E39] flex items-center justify-center">
+      <div className="w-full sm:w-1/2 bg-[#3C5E39] flex flex-col items-center justify-center min-h-screen sm:min-h-0">
+        <div>
+          <img src={Logo} alt="Velvety Logo" className="h-100 w-auto mb-4" />
+        </div>
+
         <form
           onSubmit={handleSubmit}
-          className="max-w-md w-full p-8 space-y-6 text-[#3C5E39]"
+          className="max-w-md w-full p-8  space-y-6  text-[#3C5E39]"
         >
-          <h2 className="text-3xl font-bold text-[#e4ece0] mb-4">Log In</h2>
+          <h2 className="text-3xl font-bold text-center text-[#e4ece0] mb-4">
+            Log In
+          </h2>
           <input
             type="email"
             placeholder="Email"

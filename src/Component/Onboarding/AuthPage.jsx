@@ -37,7 +37,7 @@ const AuthPage = () => {
       });
       setIsLogin(true);
     } catch (error) {
-      toast.error(`Registration failed: ${error.message}`, {
+      toast.error(`Registration failed, try again`, {
         position: "top-center",
       });
     }
@@ -51,7 +51,9 @@ const AuthPage = () => {
       // Redirect or navigate to the home page here
       navigate("/home");
     } catch (error) {
-      toast.error(`Login failed: ${error.message}`, { position: "top-center" });
+      toast.error(`Login failed, Sign up first`, {
+        position: "top-center",
+      });
     }
   };
 

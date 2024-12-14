@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
+import women from "../../assets/women.jpg";
+import Logo from "../../assets/Logo.svg";
 
 export default function Register({
   onToggle,
@@ -32,7 +35,11 @@ export default function Register({
   return (
     <div className="flex min-h-screen">
       {/* leftt Side: Register Form */}
-      <div className="w-1/2 bg-[#3C5E39] flex items-center justify-center">
+      <div className="w-full sm:w-1/2 bg-[#3C5E39] flex flex-col items-center justify-center">
+        <div>
+          <img src={Logo} alt="Velvety Logo" className="h-100 w-auto mb-4" />
+        </div>
+
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -40,7 +47,9 @@ export default function Register({
           }}
           className="max-w-md w-full p-8 space-y-6 text-[#3C5E39]"
         >
-          <h2 className="text-3xl font-bold text-[#e4ece0] mb-4">Sign Up</h2>
+          <h2 className="text-3xl font-bold text-center text-[#e4ece0] mb-4">
+            Sign Up
+          </h2>
           <input
             type="text"
             placeholder="Full Name"
@@ -82,9 +91,9 @@ export default function Register({
       </div>
 
       {/* Right Side: Image */}
-      <div className="w-1/2 bg-[#e4ece0] flex items-center justify-center">
+      <div className="w-1/2 bg-[#e4ece0] flex items-center justify-center hidden sm:flex">
         <img
-          src="/path/to/your-image.jpg"
+          src={women}
           alt="Login Side Image"
           className="h-full w-full object-cover"
         />
