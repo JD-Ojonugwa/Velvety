@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/Logo.svg";
+import AuthToggleLink from "./AuthToggleLink";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ const Header = () => {
 
   // Function to handle logout
   const handleLogout = () => {
-    navigate("/");
+    navigate("/auth");
   };
 
   return (
@@ -156,7 +157,7 @@ const Header = () => {
               <span>Cart</span>
             </Link>
 
-            <Link
+            {/* <Link
               to="#"
               className="flex items-center hover:text-green-400"
               onClick={handleLogout}
@@ -170,7 +171,9 @@ const Header = () => {
                 <path d="M12 12c2.5 0 4.5 2 4.5 4.5S14.5 21 12 21 7.5 19 7.5 16.5 9.5 12 12 12zM12 2C9.79 2 8 3.79 8 6s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm4 10.5c-2.33 0-7 1.17-7 3.5V18h14v-2.5c0-2.33-4.67-3.5-7-3.5z" />
               </svg>
               <span>Logout</span>
-            </Link>
+            </Link> */}
+
+            <AuthToggleLink />
           </nav>
         </div>
 
